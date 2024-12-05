@@ -1,8 +1,5 @@
-Template Name: Furni
-Template Author: Untree.co
-Template License: https://creativecommons.org/licenses/by/3.0/
-Author URI: https://untree.co/
-
-Twitter: https://twitter.com/Untree_co
-Facebook: https://web.facebook.com/Untree.co/
-Pinterest: https://pinterest.com/Untree_co/
+Projek Mata Kuliah Tugas Produk Digital Bisnis
+Anggota Tim : 
+1. Labibah Raihanatul Salwa (22.12.2611)
+2. Erna Riyanti (22.12.2614)
+3. Pamela Riva Adina (22.12.2650)
