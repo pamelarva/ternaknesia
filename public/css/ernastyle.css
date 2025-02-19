@@ -1,0 +1,261 @@
+.row {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .col {
+    margin-top: 50px;
+    margin-left: -60px;
+  }
+  
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    width: 170px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    gap: 10px; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-secondary:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .link-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .row.navigation {
+    margin-top: 50px;
+  }
+
+  .card {
+    width: 80%; 
+    border-radius: 30px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    background-color: #ffffff; 
+    margin: 30px auto; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  }
+  
+  .card:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card-image img {
+    padding-left: 30px;
+    padding-top: 15px;
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-details h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333333;
+  }
+  
+  .card-details p {
+    font-size: 14px;
+    margin: 0;
+    color: #555555;
+  }
+
+  .links-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .link-item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #D3CDCD;
+    font-size: 13px;
+  }
+  
+  .link-icon {
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+    object-fit: contain;
+  }
+
+.arrow-logo {
+  margin-left: -70px;
+  width: 24px; /* Lebar logo panah */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-box {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  padding-top: 20px;
+  margin: 0;
+  height: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  margin-left: 70px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 14px;
+  color: #004F2E;
+  margin-left: 50px; /* Memberikan margin kiri agar sejajar dengan bubble */
+  margin-bottom: 5px;
+}
+
+.message-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 10px 20px 10px 20px;
+  border-radius: 70px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-bubble.left {
+  background-color: #D5E8EA;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  margin: 0 0 0 70px;
+  padding: 0 20px 0 20px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 70px;
+}
+
+.chat-input button {
+  margin: 0 70px 0 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: #004F2E;
+  color: #fff;
+  border: none;
+  border-radius: 70px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-input button:hover {
+  background-color: #007b55;
+}
+
+.profile-box {
+  width: 30%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+}
+
+.profile-picture {
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-box h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.profile-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+
+
+  
+  
+  
+  

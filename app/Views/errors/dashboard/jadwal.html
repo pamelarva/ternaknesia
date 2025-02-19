@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="../logo.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="../css/tiny-slider.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Ternaknesia</title>
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="home.html">Ternaknesia<span>.</span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                        <li><a class="nav-link" href="home.html">Beranda</a></li>
+						<li><a class="nav-link" href="ternak.html">Ternak</a></li>
+						<li><a class="nav-link" href="kesehatan.html">Kesehatan</a></li>
+                        <li><a class="nav-link" href="konsultasi.html">Konsultasi</a></li>
+                        <li class="nav-item active">
+							<a class="nav-link" href="jadwal.html">Jadwal</a>
+						</li>
+                        <li><a class="nav-link" href="produksi.html">Produksi</a></li>
+                        <li><a class="nav-link" href="diskusi.html">Diskusi</a></li>
+					</ul>
+
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<li><a class="nav-link" href="../profil.html"><img src="../images/user.svg"></a></li>
+					</ul>
+				</div>
+			</div>
+				
+		</nav>
+		<!-- End Header/Navigation -->
+
+		<div class="feeding-schedule-section">
+			<div class="header-row">
+			  <h2 class="section-title">Jadwal Pakan Ternak</h2>
+			  <button class="btn-pls">+</button>
+			</div>
+		  
+			<!-- Card untuk setiap jenis ternak -->
+			<div class="feeding-card">
+			  <button class="card-header" onclick="toggleCard(this)">
+				<span>Sapi Perah</span>
+				<span class="arrow">&#9660;</span>
+			  </button>
+			  <div class="card-content">
+				<ul>
+				  <li>Jenis pakan: Rumput gajah</li>
+				  <li>Waktu pemberian 1: 06:00</li>
+				  <li>Waktu pemberian 2: 14:00</li>
+				  <li>Waktu pemberian 3: 22:00</li>
+				  <li>Banyaknya pakan per pemberian: 10 kg</li>
+				</ul>
+			  </div>
+			</div>
+		  
+			<div class="feeding-card">
+			  <button class="card-header" onclick="toggleCard(this)">
+				<span>Kambing</span>
+				<span class="arrow">&#9660;</span>
+			  </button>
+			  <div class="card-content">
+				<ul>
+				  <li>Jenis pakan: Jerami</li>
+				  <li>Waktu pemberian: 08:00</li>
+				  <li>Banyaknya pakan: 5 kg</li>
+				</ul>
+			  </div>
+			</div>
+		  
+			<div class="feeding-card">
+			  <button class="card-header" onclick="toggleCard(this)">
+				<span>Bebek</span>
+				<span class="arrow">&#9660;</span>
+			  </button>
+			  <div class="card-content">
+				<ul>
+				  <li>Jenis pakan: Pelet</li>
+				  <li>Waktu pemberian: 07:00, 16:00</li>
+				  <li>Banyaknya pakan: 3 kg</li>
+				</ul>
+			  </div>
+			</div>
+		  </div>		  
+		
+		<script src="../js/bootstrap.bundle.min.js"></script>
+		<script src="../js/tiny-slider.js"></script>
+		<script src="../js/custom.js"></script>
+		<script src="../js/jadwal.js"></script>
+	</body>
+
+</html>

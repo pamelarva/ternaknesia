@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="../logo.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link href="../css/tiny-slider.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<title>Ternaknesia</title>
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="home.html">Ternaknesia<span>.</span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li><a class="nav-link" href="home.html">Beranda</a></li>
+                        <li class="nav-item active">
+							<a class="nav-link" href="ternak.html">Ternak</a>
+						</li>
+                        <li><a class="nav-link" href="kesehatan.html">Kesehatan</a></li>
+                        <li><a class="nav-link" href="konsultasi.html">Konsultasi</a></li>
+                        <li><a class="nav-link" href="jadwal.html">Jadwal</a></li>
+                        <li><a class="nav-link" href="produksi.html">Produksi</a></li>
+                        <li><a class="nav-link" href="diskusi.html">Diskusi</a></li>
+					</ul>
+					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+						<li><a class="nav-link" href="../profil.html"><img src="../images/user.svg"></a></li>
+					</ul>
+				</div>
+			</div>
+				
+		</nav>
+		<!-- End Header/Navigation -->
+
+        <div class="untree_co-section before-footer-section">
+            <div class="container">
+              <!-- Pie Chart Section -->
+              <div class="row mb-4">
+                <div class="col-12 d-flex justify-content-center">
+                  <canvas id="ternakPieChart" style="max-width: 300px; max-height: 300px; width: 100%; height: auto;"></canvas>
+                </div>
+              </div>
+              <!-- Header and Add Button -->
+              <div class="row mb-3">
+                <div class="col-10 text-left">
+                  <h2>Ternak</h2>
+                </div>
+                <div class="col-12 text-right" style="position: relative;">
+                  <button style="border-radius: 50%; width: 40px; height: 40px; position: absolute; top: -20px; right: 0; display: flex; justify-content: center; align-items: center; background-color: #FF9F00; border: none;">
+                    <i class="fas fa-plus" style="color: white;"></i>					  
+                  </button>
+                </div>
+              </div>
+              <!-- Table Section -->
+              <div class="row mb-5">
+                <form class="col-md-12" method="post">
+                  <div class="site-blocks-table">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Jenis Ternak</th>
+                          <th>Jumlah</th>
+                          <th>Usia (Tahun)</th>
+                          <th>Berat (Kg)</th>
+                          <th>Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Sapi</td>
+                          <td>10</td>
+                          <td>3</td>
+                          <td>400</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" title="Edit" href="edit_ternak.html" style="background-color: #007bff; border: none;">
+                              <i class="fas fa-edit" style="color: blue;"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm" title="Hapus" style="background-color: #dc3545; border: none;">
+                              <i class="fas fa-trash" style="color: red;"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kambing</td>
+                            <td>15</td>
+                            <td>2</td>
+                            <td>50</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm" title="Edit" style="background-color: #007bff; border: none;">
+                              <i class="fas fa-edit" style="color: blue;"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm" title="Hapus" style="background-color: #dc3545; border: none;">
+                              <i class="fas fa-trash" style="color: red;"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Script -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const ctx = document.getElementById('ternakPieChart').getContext('2d');
+              
+              // Data untuk pie chart
+              const data = {
+                labels: ['Sapi', 'Kambing'],
+                datasets: [{
+                  label: 'Jumlah Ternak',
+                  data: [10, 15],
+                  backgroundColor: ['#007bff', '#28a745'],
+                  hoverOffset: 4
+                }]
+              };
+          
+              // Konfigurasi pie chart
+              const config = {
+                type: 'pie',
+                data: data,
+                options: {
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      position: 'top',
+                    },
+                    tooltip: {
+                      callbacks: {
+                        label: function (context) {
+                          return `${context.label}: ${context.raw} ekor`;
+                        }
+                      }
+                    }
+                  }
+                }
+              };
+          
+              // Render pie chart
+              new Chart(ctx, config);
+            });
+          </script>
+
+		<script src="../js/bootstrap.bundle.min.js"></script>
+		<script src="../js/tiny-slider.js"></script>
+		<script src="../js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</body>
+
+</html>          

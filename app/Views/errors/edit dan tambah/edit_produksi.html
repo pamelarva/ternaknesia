@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="../logo.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+
+  <title>Edit Produksi</title>
+</head>
+
+<body>
+
+  <!-- Start Header/Navigation -->
+  <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Furni navigation bar">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">Ternaknesia<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsFurni">
+        <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+          <li><a class="nav-link" href="home.html">Beranda</a></li>
+          <li><a class="nav-link" href="ternak.html">Ternak</a></li>
+          <li><a class="nav-link" href="kesehatan.html">Kesehatan</a></li>
+          <li><a class="nav-link" href="konsultasi.html">Konsultasi</a></li>
+          <li><a class="nav-link" href="jadwal.html">Jadwal</a></li>
+          <li class="nav-item active"><a class="nav-link" href="produksi.html">Produksi</a></li>
+          <li><a class="nav-link" href="diskusi.html">Diskusi</a></li>
+        </ul>
+        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+          <li><a class="nav-link" href="../profil.html"><img src="../images/user.svg"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Header/Navigation -->
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2>Edit Produksi</h2>
+        <form method="POST" action="update_produksi.php">
+          <div class="form-group">
+            <label for="jenis_ternak">Jenis Ternak</label>
+            <input type="text" class="form-control" id="jenis_ternak" name="jenis_ternak" value="Sapi Perah" required>
+          </div>
+          <div class="form-group">
+            <label for="tanggal_produksi">Tanggal Produksi</label>
+            <input type="date" class="form-control" id="tanggal_produksi" name="tanggal_produksi" value="2024-10-20" required>
+          </div>
+          <div class="form-group">
+            <label for="jenis_produksi">Jenis Produksi</label>
+            <select class="form-control" id="jenis_produksi" name="jenis_produksi">
+              <option value="Susu" selected>Susu</option>
+              <option value="Telur">Telur</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="jumlah_produksi">Jumlah Produksi</label>
+            <input type="text" class="form-control" id="jumlah_produksi" name="jumlah_produksi" value="30 liter" required>
+          </div>
+          <div class="form-group">
+            <label for="gambar_produksi">Gambar Produksi</label>
+            <input type="file" class="form-control" id="gambar_produksi" name="gambar_produksi">
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Simpan Perubahan</button>
+          <a href="produksi.html" class="btn btn-secondary mt-3">Kembali</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/custom.js"></script>
+
+</body>
+
+</html>

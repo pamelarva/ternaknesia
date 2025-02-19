@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="../logo.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" /> 
+
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+
+  <title>Tambah Jadwal Pakan Ternak</title>
+</head>
+
+<body>
+
+  <!-- Start Header/Navigation -->
+  <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Ternaknesia navigation bar">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">Ternaknesia<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsFurni">
+        <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+          <li><a class="nav-link" href="home.html">Beranda</a></li>
+          <li class="nav-item active"><a class="nav-link" href="ternak.html">Ternak</a></li>
+          <li><a class="nav-link" href="kesehatan.html">Kesehatan</a></li>
+          <li><a class="nav-link" href="konsultasi.html">Konsultasi</a></li>
+          <li><a class="nav-link" href="jadwal.html">Jadwal</a></li>
+          <li><a class="nav-link" href="produksi.html">Produksi</a></li>
+          <li><a class="nav-link" href="diskusi.html">Diskusi</a></li>
+        </ul>
+        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+          <li><a class="nav-link" href="../profil.html"><img src="../images/user.svg"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Header/Navigation -->
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="mb-4">Tambah Jadwal Pakan Ternak</h2>
+        <form id="add-schedule-form" onsubmit="addSchedule(event)">
+          <div class="form-group">
+            <label for="animal-type">Jenis Ternak</label>
+            <input type="text" class="form-control" id="animal-type" placeholder="Masukkan jenis ternak" required>
+          </div>
+          <div class="form-group">
+            <label for="feed-type">Jenis Pakan</label>
+            <input type="text" class="form-control" id="feed-type" placeholder="Masukkan jenis pakan" required>
+          </div>
+          <div class="form-group">
+            <label for="feed-time">Waktu Pemberian 1</label>
+            <input type="text" class="form-control" id="feed-time" required>
+          </div>
+          <div class="form-group">
+            <label for="feed-time">Waktu Pemberian 2</label>
+            <input type="text" class="form-control" id="feed-time" required>
+          </div>
+          <div class="form-group">
+            <label for="feed-time">Waktu Pemberian 3</label>
+            <input type="text" class="form-control" id="feed-time" required>
+          </div>
+          <div class="form-group">
+            <label for="feed-amount">Banyaknya Pakan (kg)</label>
+            <input type="number" class="form-control" id="feed-amount" placeholder="Masukkan jumlah pakan" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Tambah Jadwal</button>
+          <a href="jadwal.html" class="btn btn-secondary mt-3">Kembali</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function addSchedule(event) {
+      event.preventDefault(); // Prevent form from reloading the page
+
+      // Ambil data dari form
+      const animalType = document.getElementById('animal-type').value;
+      const feedType = document.getElementById('feed-type').value;
+      const feedTime = document.getElementById('feed-time').value;
+      const feedAmount = document.getElementById('feed-amount').value;
+
+      // Buat elemen kartu baru untuk jadwal pakan
+      const card = document.createElement('div');
+      card.classList.add('feeding-card');
+      
+      const cardHeader = document.createElement('button');
+      cardHeader.classList.add('card-header');
+      cardHeader.onclick = () => toggleCard(cardHeader);
+      cardHeader.innerHTML = `<span>${animalType}</span><span class="arrow">&#9660;</span>`;
+      card.appendChild(cardHeader);
+
+      const cardContent = document.createElement('div');
+      cardContent.classList.add('card-content');
+      cardContent.style.display = 'none';
+      cardContent.innerHTML = `
+        <ul>
+          <li>Jenis pakan: ${feedType}</li>
+          <li>Waktu pemberian: ${feedTime}</li>
+          <li>Banyaknya pakan: ${feedAmount} kg</li>
+        </ul>
+      `;
+      card.appendChild(cardContent);
+
+      // Tambahkan kartu baru ke dalam bagian jadwal
+      document.getElementById('feeding-cards').appendChild(card);
+
+      // Reset form dan sembunyikan setelah menambahkan
+      document.getElementById('add-schedule-form').reset();
+    }
+
+    function toggleCard(button) {
+      const content = button.nextElementSibling;
+      const arrow = button.querySelector('.arrow');
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        arrow.innerHTML = '&#9660;';
+      } else {
+        content.style.display = 'block';
+        arrow.innerHTML = '&#9650;';
+      }
+    }
+  </script>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/custom.js"></script>
+
+</body>
+</html>
